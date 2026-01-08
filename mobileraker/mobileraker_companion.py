@@ -162,10 +162,10 @@ class MobilerakerCompanion:
             # Use device-specific exclude_filament_sensors if available
             exclude_sensors = cfg.settings.exclude_filament_sensors if hasattr(cfg.settings, 'exclude_filament_sensors') else self.exclude_sensors
             
-            filament_sensor_notifications = self._filament_sensor_notifications(cfg, snapshot, exclude_sensors)
-            if filament_sensor_notifications is not None:
-                self._logger.info('FilamentSensorNoti.size %i', len(filament_sensor_notifications))
-                notifications.extend(filament_sensor_notifications)
+            # filament_sensor_notifications = self._filament_sensor_notifications(cfg, snapshot, exclude_sensors)
+            # if filament_sensor_notifications is not None:
+            #     self._logger.info('FilamentSensorNoti.size %i', len(filament_sensor_notifications))
+            #     notifications.extend(filament_sensor_notifications)
 
             self._logger.debug('Notifications for %s: %s',
                                 cfg.fcm_token, notifications)
